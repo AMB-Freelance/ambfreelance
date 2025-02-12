@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Who We Are - [Your AMB Freelance Name]</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: transparent;
+            color: #333;
+            background-image: url('about us.png'); /* Set your background image */
+            background-size: cover;
+            background-position: center;
+            height: 100vh; /* Ensure the body takes full height */
+            position: relative;
+        }
+
+        /* Navbar Styles */
+        .navbar {
+            background-color: white; /* Semi-transparent background */
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000; /* Ensure it stays on top */
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 5px 20px; /* Reduced padding for a shorter navbar */
+            height: 40px; /* Set a specific height for the navbar */
+        }
+        .navbar a {
+            color: black;
+            text-decoration: none;
+            padding: 8px 16px; /* Reduced padding for links */
+            font-size: 14px; /* Smaller font size */
+        }
+        .navbar a:hover {
+            background-color: transparent;
+            color: black;
+        }
+        .navbar .logo img {
+            height: 30px; /* Adjust logo size */
+            width: auto;
+        }
+        .navbar .menu {
+            display: flex;
+        }
+        .navbar .hamburger {
+            display: none;
+            font-size: 25px; /* Slightly smaller hamburger menu icon */
+            cursor: pointer;
+            padding: 10px;
+            color: black;
+        }
+
+        /* Responsive Layout (Hamburger menu for mobile) */
+        @media screen and (max-width: 768px) {
+            .navbar .menu {
+                display: none;
+                width: 100%;
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            .navbar .hamburger {
+                display: block;
+            }
+            .navbar.responsive .menu {
+                display: flex;
+                padding-top: 10px;
+            }
+            .navbar.responsive a {
+                padding: 12px;
+                text-align: left;
+                width: 100%;
+            }
+        }
+
+        /* Page content styles */
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 0;
+            text-align: center;
+        }
+        header h1 {
+            margin: 0;
+        }
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: transparent;
+            margin-top: 100px; /* Adjust for navbar */
+        }
+        h2 {
+            color: white;
+            font-size: 25px;
+        }
+        h3 {
+            color: white;
+        }
+        p {
+            margin-bottom: 20px;
+            font-size: 20px;
+        }
+        .section {
+            margin-bottom: 40px;
+        }
+        .ul, li {
+            color: white;
+            font-size: 20px;
+        }
+        
+        /* Shortened Footer */
+        .footer {
+            background-color: rgba(0, 0, 0, 0.8);
+            color: white;
+            padding: 10px 0;  /* Reduced padding to make it shorter */
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            text-align: center;
+        }
+
+        .footer p {
+            margin: 0; /* Removes default margin from <p> tag */
+        }
+
+        .testimonial {
+            background-color: transparent;
+            padding: 15px;
+            margin: 20px 0;
+            border-left: 5px solid #333;
+        }
+        .testimonial p {
+            font-style: italic;
+        }
+        .team {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+        .team-member {
+            text-align: center;
+            margin: 20px;
+            width: 250px;
+        }
+        .team-member img {
+            width: 100%;
+            border-radius: 50%;
+        }
+
+        /* New style for Who We Are title */
+        h2.who-we-are-title {
+            font-size: 50px; /* Makes the font bigger */
+            font-weight: bold; /* Makes the text bold */
+            text-align: center; /* Centers the title */
+            margin-top: 50px; /* Adds some space above */
+            margin-bottom: 20px; /* Adds some space below */
+        }
+        h2.who-we-are-title, p {
+            color: white; /* You can change the color if needed */
+        }
+
+    </style>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <div class="navbar" id="navbar">
+        <a href="#" class="logo">
+            <img src="logo.jpg" alt="AMB Freelance Logo"> <!-- Replace logo.png with your actual logo image -->
+        </a>
+        <div class="menu">
+            <a href="index.html">Home</a>
+        </div>
+        <span class="hamburger" onclick="toggleNavbar()">&#9776;</span>
+    </div>
+
+    <div class="container">
+        <!-- Who We Are Section -->
+        <section class="section" id="who-we-are">
+            <h2 class="who-we-are-title">Who We Are</h2>
+            <p>At [Your AMB Freelance Name], we are passionate about delivering innovative solutions that drive business success. With years of expertise and a relentless commitment to excellence, we have become a trusted partner for businesses looking to elevate their performance. Our mission is to understand your challenges and deliver strategies that lead to measurable success, so you can stay ahead of the competition.</p>
+        </section>
+
+        <section class="section">
+            <h2>What Sets Us Apart</h2>
+            <ul>
+                <li><strong>Experience:</strong> With years of industry experience, we have developed a profound understanding of the challenges businesses face, allowing us to offer insights and strategies that make a real impact.</li>
+                <li><strong>Tailored Solutions:</strong> We believe every business is unique, which is why we customize our services to fit your specific needs, ensuring optimal results.</li>
+                <li><strong>Innovative Approach:</strong> We stay ahead of industry trends to deliver innovative solutions that are both effective and future-ready, helping you stay competitive in a rapidly evolving marketplace.</li>
+                <li><strong>Results-Driven:</strong> Our approach is always focused on delivering tangible results. We assess, strategize, and implement solutions that generate measurable success for your business.</li>
+            </ul>
+        </section>
+
+        <section class="section">
+            <h2>Our Values</h2>
+            <ul>
+                <li><strong>Integrity:</strong> We operate with the highest level of integrity and transparency, building trust with our clients and partners.</li>
+                <li><strong>Collaboration:</strong> We work closely with you to understand your goals and craft solutions that truly align with your vision.</li>
+                <li><strong>Excellence:</strong> We strive for excellence in everything we do, from the services we provide to the relationships we build.</li>
+                <li><strong>Innovation:</strong> We encourage creativity and new ideas, constantly adapting our strategies to provide the most advanced and effective solutions.</li>
+                <li><strong>Commitment:</strong> Our clients are our priority. We dedicate ourselves fully to ensuring your success and satisfaction with our services.</li>
+            </ul>
+        </section>
+
+        <section class="section">
+            <h2>Why Choose Us?</h2>
+            <ul>
+                <li><strong>Proven Track Record:</strong> Our portfolio of successful projects speaks for itself. We’ve helped businesses of all sizes achieve their goals through our innovative solutions.</li>
+                <li><strong>Dedicated Team:</strong> Our team is made up of experts in their respective fields, each passionate about delivering results that exceed expectations.</li>
+                <li><strong>Commitment to Your Success:</strong> Your success is our success. We are fully invested in helping you grow and thrive in an ever-changing business environment.</li>
+                <li><strong>Client-Centric Approach:</strong> We always put your needs first, crafting strategies that align with your goals and objectives.</li>
+            </ul>
+        </section>
+
+        <section class="section">
+            <h2>Our Expert Team</h2>
+            <div class="team">
+                <div class="team-member">
+                    <img src="Anshu Baghel.JPG" alt="Team Member 1">
+                    <h3>Anshu Baghel</h3>
+                    <p>CEO & Founder</p>
+                    <p>Anshu is a visionary leader with over 4-5 years of experience in the industry. His leadership and strategic insight have shaped the success of [Your AMB Freelance Name].</p>
+                </div>
+                <div class="team-member">
+                    <img src="Mohit Baghel.jpg" alt="Team Member 2">
+                    <h3>Mohit Baghel</h3>
+                    <p>Chief Technology Officer</p>
+                    <p>Mohit brings a wealth of technical expertise and a passion for innovative solutions that solve complex business problems.</p>
+                </div>
+                <div class="team-member">
+                    <img src="Hemant.jpg" alt="Team Member 3">
+                    <h3>Hemant Baghel</h3>
+                    <p>Lead Consultant</p>
+                    <p>With a background in consulting, Hemant is an expert in helping businesses identify opportunities for growth and improvement.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section testimonial">
+            <h2>Client Testimonials</h2>
+            <p>"Working with [Your AMB Freelance Name] has been an absolute game-changer for us. Their innovative solutions and dedicated team helped us increase our revenue by 30% in just one quarter." - <strong>Sarah Lee, CEO of XYZ Corp</strong></p>
+        </section>
+
+        <section class="section">
+            <h2>Our Philosophy</h2>
+            <p>We believe in building long-lasting relationships with our clients. At the core of our business philosophy is a deep commitment to collaboration, transparency, and continuous improvement. We aim to not only meet your needs but exceed your expectations by fostering a culture of trust and excellence.</p>
+        </section>
+
+        <section class="section">
+            <p>At [Your AMB Freelance Name], we are not just a service provider—we are your partner in growth. Let us help you take your business to the next level.</p>
+        </section>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2025 Our AMB Freelance. All rights reserved.</p>
+    </footer>
+
+    <script>
+        function toggleNavbar() {
+            var navbar = document.getElementById("navbar");
+            navbar.classList.toggle("responsive");
+
+            var menu = document.querySelector(".menu");
+            if (menu.style.display === "flex") {
+                menu.style.display = "none";
+            } else {
+                menu.style.display = "flex";
+            }
+        }
+    </script>
+
+</body>
+</html>

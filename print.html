@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Print Design Project</title>
+    <style>
+        /* Reset margins and padding */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        /* Full-page background image */
+        body {
+            background-image: url('print.jpg'); /* Replace with your image URL */
+            background-size: cover; /* Ensure the image covers the full page */
+            background-position: center; /* Center the image */
+            background-attachment: fixed; /* Ensure the image stays fixed while scrolling */
+            background-repeat: no-repeat; /* Prevent the image from repeating */
+            font-family: Arial, sans-serif;
+            height: 100vh;
+            color: white;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Navbar styles */
+        .navbar {
+            position: sticky;
+            top: 0;
+            background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent navbar */
+            padding: 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 1000;
+        }
+
+        .navbar img {
+            width: 60px; /* Adjust logo size */
+        }
+
+        .navbar ul {
+            list-style: none;
+            display: flex;
+        }
+
+        .navbar ul li {
+            margin-left: 25px;
+        }
+
+        .navbar a {
+            text-decoration: none;
+            color: white;
+            font-size: 20px; /* Increased font size */
+        }
+
+        /* Hamburger menu for small screens */
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+            gap: 6px;
+        }
+
+        .hamburger div {
+            width: 30px;
+            height: 4px;
+            background-color: white;
+        }
+
+        /* Content styling */
+        .content {
+            text-align: center;
+            padding: 120px 20px;
+            background-color: transparent; /* Semi-transparent background for better readability */
+            margin-bottom: 60px;
+        }
+
+        .content h1 {
+            font-size: 4em; /* Increased font size */
+            margin-bottom: 30px;
+        }
+
+        .content p {
+            font-size: 1.5em; /* Increased font size */
+            line-height: 1.8;
+        }
+
+        /* Sections */
+        .section {
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        .section h2 {
+            font-size: 3em; /* Increased font size */
+            margin-bottom: 40px;
+        }
+
+        .section p {
+            font-size: 1.4em; /* Increased font size */
+            line-height: 1.8;
+        }
+
+        .section ul {
+            font-size: 1.4em; /* Increased font size for list items */
+            list-style: none;
+            margin: 20px 0;
+            padding-left: 0;
+        }
+
+        .section ul li {
+            margin-bottom: 15px;
+        }
+
+        /* Footer styles */
+        .footer {
+            position: sticky;
+            bottom: 0;
+            background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent footer */
+            color: white;
+            text-align: center;
+            padding: 15px;
+            width: 100%;
+        }
+
+        /* Responsive styles */
+        @media (max-width: 768px) {
+            .navbar ul {
+                display: none;
+                flex-direction: column;
+                width: 100%;
+                text-align: center;
+                padding-top: 10px;
+            }
+
+            .navbar.active ul {
+                display: flex;
+            }
+
+            .hamburger {
+                display: flex;
+            }
+
+            .content {
+                padding: 100px 20px;
+            }
+
+            .section {
+                padding: 40px 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <div class="navbar">
+        <img src="logo.jpg" alt="Logo"> <!-- Replace with your logo image -->
+        <div class="hamburger" onclick="toggleMenu()">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="project.html">Back</a></li>
+        </ul>
+    </div>
+
+    <!-- Main content -->
+    <div class="content">
+        <h1>Print Design </h1>
+        <p>This project highlights our expertise in print design. We specialize in creating beautiful, high-quality print materials that communicate your brand message effectively. From business cards to brochures, posters to magazines, our designs help bring your ideas to life in print. Explore our process and services below!</p>
+    </div>
+
+    <!-- About the Project -->
+    <div class="section" id="about">
+        <h2>About the Project</h2>
+        <p>The Print Design Project focuses on crafting visually appealing and functional print materials that capture attention. Our goal is to create designs that are not only aesthetically pleasing but also strategically communicate your brand's message. Whether it’s for marketing, events, or corporate communications, we provide tailored solutions for all your print design needs.</p>
+    </div>
+
+    <!-- Design Process -->
+    <div class="section" id="process" style="background-color: transparent;">
+        <h2>Our Design Process</h2>
+        <p>We follow a meticulous approach to ensure your print design project is executed to perfection. Here’s how we work:</p>
+        <ul>
+            <li><strong>Client Consultation:</strong> We start by understanding your needs, objectives, and target audience to craft a design that aligns with your vision.</li>
+            <li><strong>Research & Inspiration:</strong> We explore industry trends, competitor materials, and your brand’s ethos to inspire the design direction.</li>
+            <li><strong>Design Concepts:</strong> We create initial design concepts that focus on layout, typography, and color schemes to represent your brand identity.</li>
+            <li><strong>Refinement & Proofing:</strong> We refine the selected concept, ensuring accuracy in details like typography, color matching, and print specifications.</li>
+            <li><strong>Final Production:</strong> Once approved, we prepare the final design for production and ensure high-quality printing standards.</li>
+        </ul>
+    </div>
+
+    <!-- Print Design Services -->
+    <div class="section" id="services">
+        <h2>Our Print Design Services</h2>
+        <p>We offer a variety of print design services to meet your needs. From creative brochures to professional business cards, we provide designs that leave a lasting impression:</p>
+        <ul>
+            <li><strong>Brochure Design:</strong> High-quality brochures that effectively convey your business information, services, and offerings.</li>
+            <li><strong>Business Cards:</strong> Custom-designed business cards that make a memorable first impression and align with your brand identity.</li>
+            <li><strong>Flyers & Posters:</strong> Attention-grabbing flyers and posters that stand out and engage your audience, ideal for marketing events or promotions.</li>
+            <li><strong>Magazine & Catalog Design:</strong> Creative designs for magazines, catalogs, and periodicals that reflect your brand's personality while providing useful content.</li>
+            <li><strong>Packaging Design:</strong> Custom packaging solutions that enhance your product’s appeal and reinforce your brand’s visual identity.</li>
+            <li><strong>Annual Reports & Publications:</strong> Professionally designed annual reports, books, and publications that effectively communicate your message with a focus on readability and style.</li>
+        </ul>
+    </div>
+
+    <!-- Client Testimonials -->
+    <div class="section" id="testimonials" style="background-color: transparent;">
+        <h2>Client Testimonials</h2>
+        <p>Here’s what our clients say about our print design services:</p>
+        <blockquote>
+            <p>"We were absolutely thrilled with the brochures you designed for our new product line. The designs were fresh, professional, and perfectly aligned with our branding. We've seen a huge increase in interest since the launch!" – <strong>Rachel Stone, Marketing Director at TechPro</strong></p>
+        </blockquote>
+        <blockquote>
+            <p>"The business cards you created for our team are fantastic! They're unique, stylish, and definitely leave an impression with every client we meet." – <strong>David Miller, CEO of FreshWave</strong></p>
+        </blockquote>
+        <blockquote>
+            <p>"Your creative approach to our company’s annual report was just what we needed. The design made it more engaging and easier to digest, impressing both our stakeholders and clients." – <strong>Amy Johnson, COO of Green Horizons</strong></p>
+        </blockquote>
+    </div>
+
+
+    <!-- Footer -->
+    <div class="footer">
+        <p style="font-size: 1.5em;">© 2025 Our AMB Freelance. All rights reserved.</p>
+    </div>
+
+    <script>
+        // Toggle the navbar on small screens
+        function toggleMenu() {
+            document.querySelector('.navbar').classList.toggle('active');
+        }
+    </script>
+
+</body>
+</html>

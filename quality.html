@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Quality Services</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <style>
+        /* Global Styles */
+        html, body {
+            height: 100%;
+            margin: 0;
+        }
+
+        body {
+            background: url('Quality.png') no-repeat center center fixed;
+            background-size: cover;
+            color: white;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Navbar */
+        .navbar {
+            background-color: rgba(255, 255, 255, 0.9);
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+        }
+        .navbar a {
+            color: black;
+        }
+        .navbar .navbar-nav .nav-link {
+            color: #333; /* Dark text color for readability */
+            font-weight: bold;
+        }
+
+        .navbar .navbar-nav .nav-link:hover {
+            color: #ff6b6b;
+        }
+
+        /* Hero Section */
+        .hero-section {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: transparent; /* Dark overlay */
+            text-align: center;
+        }
+
+        .hero-section h1 {
+            font-size: 3rem;
+            font-weight: bold;
+        }
+
+        .hero-section p {
+            font-size: 1.25rem;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        /* Services Section */
+        .services-section {
+            padding: 60px 0;
+            background-color: transparent; /* Dark overlay */
+            text-align: center;
+        }
+
+        .services-section h2 {
+            font-size: 2.5rem;
+            margin-bottom: 30px;
+        }
+
+        /* Service Cards */
+        .service-card {
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            margin-bottom: 30px;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .service-card:hover {
+            transform: scale(1.05); /* Hover effect to scale the card */
+        }
+
+        .service-card img {
+            width: 100%; /* Ensure image fills the card */
+            height: auto;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+
+        .service-card h4 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            color: #333;
+        }
+
+        .service-card p {
+            font-size: 1rem;
+            color: #666;
+        }
+
+        /* Button Styles */
+        .btn-learn-more {
+            background-color: #ff6b6b;
+            color: white;
+            padding: 12px 30px;
+            font-size: 1rem;
+            border: none;
+            border-radius: 5px;
+            transition: 0.3s;
+        }
+
+        .btn-learn-more:hover {
+            background-color: #e63946;
+        }
+
+        /* Client Testimonials Section */
+        .testimonials-section {
+            padding: 60px 0;
+            background-color: transparent; /* Dark overlay */
+            text-align: center;
+        }
+
+        .testimonial-card {
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            margin-bottom: 30px;
+        }
+
+        .testimonial-card p {
+            font-size: 1.2rem;
+            font-style: italic;
+            color: #333;
+        }
+
+        .testimonial-card h5 {
+            font-size: 1.5rem;
+            margin-top: 15px;
+            color: #ff6b6b;
+        }
+
+        /* Footer */
+        .footer {
+            background-color: rgba(0, 0, 0, 0.8);
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .hero-section h1 {
+                font-size: 2rem;
+            }
+
+            .hero-section p {
+                font-size: 1.125rem;
+            }
+
+            .service-card h4 {
+                font-size: 1.25rem;
+            }
+
+            .service-card p {
+                font-size: 0.9rem;
+            }
+
+            .testimonial-card h5 {
+                font-size: 1.25rem;
+            }
+        }
+
+        /* Footer */
+.footer {
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 20px 0;  /* Adds padding to top and bottom */
+    position: fixed;
+    bottom: 0;  /* Keeps the footer at the bottom of the page */
+    left: 0;
+    width: 100%;  /* Ensures the footer stretches across the whole screen */
+    text-align: center;  /* Centers the content inside the footer */
+}
+
+.footer p {
+    margin: 0; /* Removes default margin from <p> tag */
+}
+    </style>
+</head>
+<body>
+
+    <!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-light">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#">
+            <img src="logo.jpg" alt="Logo" style="width: 50px;">
+        </a>
+        <!-- Navbar Toggler (Hamburger) -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+<!-- Navbar Links -->
+<div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav ms-auto">
+        <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+        </li>
+    </ul>
+</div>
+</div>
+</nav>
+
+<!-- Hero Section -->
+<section class="hero-section">
+    <div class="container">
+        <h1>Quality Services You Can Trust</h1>
+        <p>We provide high-quality services to help you achieve your goals. Our team of experts is here to ensure your success with tailored solutions.</p>
+    </div>
+</section>
+
+<!-- Services Section -->
+<section class="services-section">
+    <div class="container">
+        <h2>Our Quality Services</h2>
+        <div class="row">
+            <!-- Service 1 -->
+            <div class="col-md-4 mb-4">
+                <div class="service-card">
+                    <img src="consulting.png" alt="Consulting Image"> <!-- Add your image path here -->
+                    <h4>Consulting Services</h4>
+                    <p>We offer expert consulting to guide you through challenges and develop the best strategies for your success.</p>
+                    <a href="consulting.html" class="btn-learn-more">Learn More</a> <!-- Link to detailed page -->
+                </div>
+            </div>
+
+            <!-- Service 2 -->
+            <div class="col-md-4 mb-4">
+                <div class="service-card">
+                    <img src="interaction.webp" alt="Interaction Quality Image"> <!-- Add your image path here -->
+                    <h4>Interaction Quality</h4>
+                    <p>This factor involves relationships between customers and service providers where interactions happen via different communication channels.</p>
+                    <a href="interaction.html" class="btn-learn-more">Learn More</a> <!-- Link to detailed page -->
+                </div>
+            </div>
+
+            <!-- Service 3 -->
+            <div class="col-md-4 mb-4">
+                <div class="service-card">
+                    <img src="business.webp" alt="Business Development Image"> <!-- Add your image path here -->
+                    <h4>Business Development</h4>
+                    <p>We help your business grow with comprehensive solutions designed to expand your market reach and optimize operations.</p>
+                    <a href="business.html" class="btn-learn-more">Learn More</a> <!-- Link to detailed page -->
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Client Testimonials Section -->
+<section class="testimonials-section">
+    <div class="container">
+        <h2>What Our Clients Say</h2>
+        <div class="row">
+            <!-- Testimonial 1 -->
+            <div class="col-md-4 mb-4">
+                <div class="testimonial-card">
+                    <p>"The team provided excellent consulting services. They were able to understand our challenges and deliver solutions that helped us grow." </p>
+                    <h5>- John Doe, CEO of ExampleCorp</h5>
+                </div>
+            </div>
+
+            <!-- Testimonial 2 -->
+            <div class="col-md-4 mb-4">
+                <div class="testimonial-card">
+                    <p>"Our business has been transformed thanks to the seamless technology integration. We are more efficient and innovative than ever before." </p>
+                    <h5>- Jane Smith, CTO of InnovateX</h5>
+                </div>
+            </div>
+
+            <!-- Testimonial 3 -->
+            <div class="col-md-4 mb-4">
+                <div class="testimonial-card">
+                    <p>"The business development team helped us scale and reach new markets. Their strategies were spot on, and our growth speaks for itself." </p>
+                    <h5>- Sarah Lee, Marketing Director at GrowthCo</h5>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+ <!-- Footer -->
+ <footer class="footer">
+    <div class="container">
+        <p class="text-center mb-0">&copy; © 2025 Our AMB Freelance. All rights reserved.</p>
+    </div>
+</footer>
+
+</body>
+</html>

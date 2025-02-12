@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Mobile App Development</title>
+    <style>
+        /* Reset some default styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Body and Background */
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-image: url('app.webp'); /* Add your background image for mobile apps */
+            background-size: cover;
+            background-position: center;
+            min-height: 100vh;
+            color: white;
+            line-height: 1.5;
+        }
+
+        /* Navbar */
+        .navbar {
+            position: sticky;
+            top: 0;
+            background-color: rgba(0, 0, 0, 0.8);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            z-index: 1000;
+        }
+
+        .navbar .logo a {
+            display: flex;
+            align-items: center;
+            color: white;
+            text-decoration: none;
+            font-size: 24px;
+            font-weight: 500;
+        }
+
+        .navbar .logo img {
+            width: 40px; /* Adjust logo size */
+            height: auto;
+            margin-right: 10px;
+        }
+
+        .navbar .nav-links {
+            display: flex;
+            list-style: none;
+        }
+
+        .navbar .nav-links li {
+            margin: 0 15px;
+        }
+
+        .navbar .nav-links li a {
+            text-decoration: none;
+            color: white;
+            font-size: 18px;
+            transition: color 0.3s;
+        }
+
+        .navbar .nav-links li a:hover {
+            color: #FFD700;
+        }
+
+        /* Hamburger Icon for Small Screens */
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+        }
+
+        .hamburger .line {
+            width: 25px;
+            height: 3px;
+            background-color: white;
+            margin: 4px 0;
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+                flex-direction: column;
+                position: absolute;
+                top: 60px;
+                right: 20px;
+                background-color: rgba(0, 0, 0, 0.9);
+                width: 200px;
+                border-radius: 8px;
+                padding: 10px;
+            }
+
+            .nav-links.active {
+                display: flex;
+            }
+
+            .hamburger {
+                display: flex;
+            }
+
+            .nav-links li {
+                margin: 10px 0;
+            }
+
+            .nav-links li a {
+                font-size: 20px;
+            }
+        }
+
+        /* Content Section */
+        .content {
+            text-align: center;
+            padding: 150px 20px;
+        }
+
+        .content h1 {
+            font-size: 60px;
+            font-weight: 700;
+            color: black;
+            
+        }
+
+        .content p {
+            font-size: 30px;
+            margin-top: 10px;
+        }
+
+        .content .extra-content {
+            margin-top: 50px;
+            font-size: 18px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .extra-content h2 {
+            margin-top: 30px;
+            font-size: 40px;
+            color: #FFD700;
+        }
+
+        .extra-content ul {
+            list-style: none;
+            margin-top: 10px;
+        }
+
+        .extra-content ul li {
+            font-size: 25px;
+            margin: 5px 0;
+        }
+
+        /* Testimonials */
+        .testimonials {
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 50px 20px;
+            margin-top: 60px;
+        }
+
+        .testimonials h2 {
+            color: #FFD700;
+            font-size: 32px;
+            text-align: center;
+        }
+
+        .testimonials .testimonial-container {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            margin-top: 30px;
+        }
+
+        .testimonial {
+            width: 30%;
+            background-color: #333;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 30px;
+        }
+
+        .testimonial p {
+            font-style: italic;
+            color: #DDD;
+        }
+
+        .testimonial .author {
+            font-weight: bold;
+            margin-top: 10px;
+            color: #FFD700;
+        }
+
+        /* Footer */
+        .footer {
+            position: relative;
+            width: 100%;
+            text-align: center;
+            background-color: rgba(0, 0, 0, 0.8);
+            padding: 20px 0;
+            color: white;
+            bottom: 0;
+            margin-top: auto;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="logo">
+            <img src="logo.jpg" alt="Logo"> <!-- Replace with your logo image -->
+     </div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="project.html">Back</a></li>
+        </ul>
+        <div class="hamburger" id="hamburger">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+        </div>
+    </nav>
+
+    <!-- Content Section -->
+    <section class="content">
+        <div class="content-text">
+            <h1> Mobile App Development</h1>
+            <p>We specialize in developing high-quality, user-friendly mobile applications tailored to meet your business needs. Whether you're looking to build a native app or a cross-platform solution, we deliver seamless, scalable, and innovative mobile experiences.</p>
+        </div>
+
+        <!-- More Content -->
+        <div class="extra-content">
+            <h2>What We Do</h2>
+            <p>We provide end-to-end mobile app development services. Our team of experts can help transform your ideas into innovative mobile solutions. Here's what we offer:</p>
+            <ul>
+                <li>Native mobile app development for iOS and Android</li>
+                <li>Cross-platform app development using frameworks like React Native, Flutter, etc.</li>
+                <li>Custom mobile solutions tailored to specific business needs</li>
+                <li>App UI/UX design and development for a seamless user experience</li>
+                <li>Integration with third-party APIs and services</li>
+            </ul>
+
+            <h2>Why Choose Us?</h2>
+            <p>We create intuitive and engaging mobile apps with the latest technologies. Our team focuses on performance, scalability, and user satisfaction to ensure your app stands out in the competitive mobile landscape. We are your trusted partner for building mobile applications that grow your business.</p>
+
+            <h2>Our Services</h2>
+            <p>We offer a complete range of mobile app development services:</p>
+            <ul>
+                <li><strong>Mobile App Strategy:</strong> Tailor a mobile solution aligned with your business goals.</li>
+                <li><strong>Custom Mobile App Development:</strong> Build native and cross-platform apps for iOS and Android.</li>
+                <li><strong>App UI/UX Design:</strong> Create user-centric designs that deliver intuitive and engaging experiences.</li>
+                <li><strong>App Testing & Quality Assurance:</strong> Rigorous testing to ensure flawless functionality.</li>
+                <li><strong>App Maintenance & Updates:</strong> Ongoing support and maintenance to keep your app up to date.</li>
+                <li><strong>App Integration:</strong> Connect your app to third-party services like payment gateways and databases.</li>
+            </ul>
+
+            <h2>Let's Build Your App Together</h2>
+            <p>If you're ready to take your business mobile, we're here to help! Reach out today to schedule a consultation and discuss how we can bring your app idea to life.</p>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials">
+        <h2>What Our Clients Say</h2>
+        <div class="testimonial-container">
+            <div class="testimonial">
+                <p>"Their mobile app development team was incredible. They helped us launch our app on time and exceeded all our expectations. We couldn’t be happier!"</p>
+                <div class="author">James Peterson, CEO of FinTech Solutions</div>
+            </div>
+            <div class="testimonial">
+                <p>"From concept to delivery, their team was professional and dedicated. Our app has been a great success and we’ve seen a significant increase in user engagement."</p>
+                <div class="author">Emily Davis, Product Manager at HealthApp</div>
+            </div>
+            <div class="testimonial">
+                <p>"We’re thrilled with the mobile app they developed for us. The user interface is sleek, and the performance is top-notch. We highly recommend them!"</p>
+                <div class="author">Michael Johnson, Co-founder of FoodieApp</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sticky Footer -->
+    <footer class="footer">
+        <p>&copy; © 2025 Our AMB Freelance. All rights reserved.</p>
+    </footer>
+
+   <!-- Script for Hamburger Toggle -->
+   <script>
+    const hamburger = document.getElementById('hamburger');
+    const navLinks = document.querySelector('.nav-links');
+
+    hamburger.addEventListener('click', () => {
+        navLinks.classList.toggle('active');
+    });
+</script>
+</body>
+</html>

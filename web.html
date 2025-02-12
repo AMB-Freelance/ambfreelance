@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Web Development Services</title>
+    <style>
+        /* Reset some default styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Body and Background */
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-image: url('web.jpg'); /* Add your background image for web development */
+            background-size: cover;
+            background-position: center;
+            min-height: 100vh;
+            color: white;
+            line-height: 1.5;
+        }
+
+        /* Navbar */
+        .navbar {
+            position: sticky;
+            top: 0;
+            background-color: rgba(0, 0, 0, 0.8);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            z-index: 1000;
+        }
+
+        .navbar .logo a {
+            display: flex;
+            align-items: center;
+            color: white;
+            text-decoration: none;
+            font-size: 24px;
+            font-weight: 500;
+        }
+
+        .navbar .logo img {
+            width: 40px; /* Adjust logo size */
+            height: auto;
+            margin-right: 10px;
+        }
+
+        .navbar .nav-links {
+            display: flex;
+            list-style: none;
+        }
+
+        .navbar .nav-links li {
+            margin: 0 15px;
+        }
+
+        .navbar .nav-links li a {
+            text-decoration: none;
+            color: white;
+            font-size: 18px;
+            transition: color 0.3s;
+        }
+
+        .navbar .nav-links li a:hover {
+            color: #FFD700;
+        }
+
+        /* Hamburger Icon for Small Screens */
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+        }
+
+        .hamburger .line {
+            width: 25px;
+            height: 3px;
+            background-color: white;
+            margin: 4px 0;
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+                flex-direction: column;
+                position: absolute;
+                top: 60px;
+                right: 20px;
+                background-color: rgba(0, 0, 0, 0.9);
+                width: 200px;
+                border-radius: 8px;
+                padding: 10px;
+            }
+
+            .nav-links.active {
+                display: flex;
+            }
+
+            .hamburger {
+                display: flex;
+            }
+
+            .nav-links li {
+                margin: 10px 0;
+            }
+
+            .nav-links li a {
+                font-size: 20px;
+            }
+        }
+
+        /* Content Section */
+        .content {
+            text-align: center;
+            padding: 150px 20px;
+        }
+
+        .content h1 {
+            font-size: 50px;
+            font-weight: 700;
+        }
+
+        .content p {
+            font-size: 20px;
+            margin-top: 10px;
+        }
+
+        .content .extra-content {
+            margin-top: 50px;
+            font-size: 18px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .extra-content h2 {
+            margin-top: 30px;
+            font-size: 35px;
+            color: #FFD700;
+        }
+        .extra-content p {
+font-size: 25px;
+        }
+
+        .extra-content ul {
+            list-style: none;
+            margin-top: 10px;
+        }
+
+        .extra-content ul li {
+            font-size: 18px;
+            margin: 5px 0;
+        }
+
+        /* Services Section */
+        .services {
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 50px 20px;
+        }
+
+        .services h2 {
+            color: #FFD700;
+            font-size: 32px;
+            text-align: center;
+        }
+
+        .services .service-container {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            margin-top: 30px;
+        }
+
+        .service {
+            width: 30%;
+            background-color: #333;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 30px;
+        }
+
+        .service h3 {
+            color: #FFD700;
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        .service p {
+            color: #DDD;
+            font-size: 18px;
+        }
+
+        /* Footer */
+        .footer {
+            position: relative;
+            width: 100%;
+            text-align: center;
+            background-color: rgba(0, 0, 0, 0.8);
+            padding: 20px 0;
+            color: white;
+            bottom: 0;
+            margin-top: auto;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="logo">
+            <img src="logo.jpg" alt="Logo"> <!-- Replace with your logo image -->
+            
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="project.html">Back</a></li>
+        </ul>
+        <div class="hamburger" id="hamburger">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+        </div>
+    </nav>
+
+    <!-- Content Section -->
+    <section class="content">
+        <div class="content-text">
+            <h1>Transform Your Ideas into Powerful Websites</h1>
+            <p>We specialize in building custom, responsive websites tailored to meet your business needs. Whether you need a personal blog, e-commerce platform, or enterprise-level web application, we’ve got you covered.</p>
+        </div>
+
+        <!-- More Content -->
+        <div class="extra-content">
+            <h2>What We Do</h2>
+            <p>We offer a wide range of web development services, ensuring your website stands out, is secure, and delivers a great user experience. Here's what we do:</p>
+            <ul>
+                <li>Custom website design and development</li>
+                <li>Responsive design for mobile and desktop</li>
+                <li>E-commerce website development</li>
+                <li>Content management system (CMS) integration</li>
+                <li>Website maintenance and updates</li>
+            </ul>
+
+            <h2>Why Choose Us?</h2>
+            <p>We understand that every business is unique, so we build tailored solutions that align with your goals. From concept to launch, we work closely with you to create a website that exceeds expectations and helps grow your business.</p>
+
+            <h2>Our Process</h2>
+            <p>Our web development process ensures that your project is delivered on time and to your satisfaction. Here's how we work:</p>
+            <ul>
+                <li><strong>Consultation & Planning:</strong> Understanding your vision and requirements.</li>
+                <li><strong>Design & Development:</strong> Creating visually appealing and functional websites.</li>
+                <li><strong>Testing & Launch:</strong> Ensuring your website is bug-free and optimized for performance.</li>
+                <li><strong>Post-Launch Support:</strong> Ongoing maintenance and updates to keep your site running smoothly.</li>
+            </ul>
+
+            <h2>Ready to Build Your Website?</h2>
+            <p>Whether you need a simple website or a complex platform, we’re here to help. Let’s discuss your project and turn your ideas into reality.</p>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services">
+        <h2>Our Web Development Services</h2>
+        <div class="service-container">
+            <div class="service">
+                <h3>Custom Web Development</h3>
+                <p>We create custom-built websites that are perfectly aligned with your business goals, providing unique solutions tailored specifically to your needs.</p>
+            </div>
+            <div class="service">
+                <h3>E-commerce Solutions</h3>
+                <p>We develop secure and user-friendly e-commerce websites with integrated payment systems, inventory management, and shopping cart features.</p>
+            </div>
+            <div class="service">
+                <h3>Responsive Web Design</h3>
+                <p>We ensure your website looks great and functions seamlessly on all devices, including desktops, tablets, and mobile phones.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sticky Footer -->
+    <footer class="footer">
+        <p>&copy; © 2025 Our AMB Freelance. All rights reserved.</p>
+    </footer>
+
+    <!-- Script for Hamburger Toggle -->
+    <script>
+        const hamburger = document.getElementById('hamburger');
+        const navLinks = document.querySelector('.nav-links');
+
+        hamburger.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+    </script>
+</body>
+</html>

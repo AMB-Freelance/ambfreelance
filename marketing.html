@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marketing Campaign</title>
+    <style>
+        /* General Styles */
+        body {
+            margin: 0;
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            background: url('marketing.jpg') no-repeat center center fixed;
+            background-size: cover;
+            color: #fff;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            background-color: rgba(0, 0, 0, 0.7);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            width: 100%;
+        }
+
+        .logo img {
+            width: 50px;
+            height: 50px;
+        }
+
+        .nav-links ul {
+            display: flex;
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .nav-links li {
+            margin: 0 20px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: white;
+            font-size: 18px;
+            font-weight: 600;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: #00bcd4;
+        }
+
+        .hamburger {
+            display: none;
+            font-size: 30px;
+            cursor: pointer;
+        }
+
+        footer {
+            position: sticky;
+            bottom: 0;
+            background-color: rgba(0, 0, 0, 0.7);
+            color: white;
+            text-align: center;
+            padding: 10px; /* Reduced padding */
+        }
+
+        .section {
+            padding: 50px 20px;
+            text-align: center;
+            margin: 0 15px;
+        }
+
+        h1, h2 {
+            font-size: 36px;
+            font-weight: 700;
+            margin-bottom: 20px;
+            color: black;
+        }
+
+        h3 {
+            font-size: 28px;
+            margin-bottom: 15px;
+        }
+
+        p {
+            font-size: 18px;
+            line-height: 1.8;
+            margin-bottom: 25px;
+            color: black;
+        }
+
+        .feature-card, .testimonial, .team-card {
+            display: inline-block;
+            background: transparent;
+            padding: 25px;
+            margin: 20px;
+            width: 280px;
+            border-radius: 10px;
+            text-align: left;
+        }
+
+        .feature-card h3, .team-card h3 {
+            font-size: 22px;
+            margin-bottom: 10px;
+        }
+
+        .feature-card p, .team-card p {
+            font-size: 16px;
+        }
+
+        .testimonial p {
+            font-style: italic;
+            margin-bottom: 10px;
+        }
+
+        .cta-button {
+            background-color: #00bcd4;
+            color: white;
+            padding: 15px 30px;
+            font-size: 18px;
+            font-weight: 600;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        ul{
+            color: black;
+        }
+
+        .cta-button:hover {
+            background-color: #0097a7;
+        }
+
+        /* Responsive Styles */
+        @media screen and (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+
+            .hamburger {
+                display: block;
+            }
+
+            .nav-links.active {
+                display: block;
+                position: absolute;
+                top: 60px;
+                right: 0;
+                background-color: rgba(0, 0, 0, 0.9);
+                padding: 10px;
+                width: 250px;
+            }
+
+            .nav-links li {
+                margin: 15px 0;
+                text-align: center;
+            }
+
+            .section {
+                padding: 30px 15px;
+            }
+
+            .feature-card, .testimonial, .team-card {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <header class="navbar">
+        <div class="logo">
+            <img src="logo.jpg" alt="Logo" width="50" height="50">
+        </div>
+        <nav class="nav-links">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="project.html" id="backButton">Back</a></li>
+            </ul>
+        </nav>
+        <div class="hamburger" id="hamburgerMenu">
+            &#9776;
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section -->
+        <section class="section">
+            <h1>Welcome to Our Marketing Campaign</h1>
+            <p>Join us as we revolutionize marketing strategies with cutting-edge solutions designed to elevate your brand, increase ROI, and engage your audience like never before.</p>
+        </section>
+
+        <!-- About the Campaign Section -->
+        <section class="section">
+            <h2>About Our Marketing Campaign</h2>
+            <p>Our marketing campaign is designed to help businesses achieve their goals by leveraging data-driven insights, creative strategies, and targeted marketing efforts. Whether you're looking to increase brand awareness, generate leads, or boost customer loyalty, our campaign is tailored to deliver measurable results that make a lasting impact.</p>
+            <p>We utilize a variety of tools and platforms to execute multi-channel campaigns, ensuring that your message reaches the right audience at the right time.</p>
+        </section>
+
+        <!-- Marketing Objectives Section -->
+        <section class="section">
+            <h2>Our Marketing Objectives</h2>
+            <p>Our primary objectives are simple, but powerful:</p>
+            <ul>
+                <li><strong>Brand Awareness:</strong> Increase visibility and recognition of your brand across multiple platforms.</li>
+                <li><strong>Lead Generation:</strong> Drive high-quality leads that convert into loyal customers.</li>
+                <li><strong>Customer Retention:</strong> Build lasting relationships with your audience through personalized, engaging content.</li>
+                <li><strong>ROI Optimization:</strong> Ensure that every marketing dollar spent delivers measurable returns.</li>
+            </ul>
+        </section>
+
+        <!-- Marketing Strategies Section -->
+        <section class="section">
+            <h2>Our Proven Strategies</h2>
+            <p>To achieve our marketing objectives, we employ a variety of proven strategies:</p>
+            <div class="feature-card">
+                <h3>Targeted Advertising</h3>
+                <p>We focus on delivering your message to the most relevant audience through data-driven ads on platforms like Google, Facebook, and LinkedIn.</p>
+            </div>
+            <div class="feature-card">
+                <h3>Content Marketing</h3>
+                <p>Our content creation process involves crafting compelling stories, blogs, videos, and social media content that resonate with your audience.</p>
+            </div>
+            <div class="feature-card">
+                <h3>Email Campaigns</h3>
+                <p>Through personalized email campaigns, we nurture leads and maintain ongoing engagement with your customer base.</p>
+            </div>
+        </section>
+
+        <!-- Features Section -->
+        <section class="section">
+            <h2>Key Features</h2>
+            <div class="feature-card">
+                <h3>Data-Driven Insights</h3>
+                <p>Utilize powerful analytics tools that provide real-time insights to optimize your marketing efforts.</p>
+            </div>
+            <div class="feature-card">
+                <h3>Targeted Campaigns</h3>
+                <p>Launch hyper-targeted marketing campaigns that resonate with your ideal audience.</p>
+            </div>
+            <div class="feature-card">
+                <h3>Increased ROI</h3>
+                <p>Our proven strategies will ensure that every dollar you spend goes towards driving results.</p>
+            </div>
+        </section>
+
+        <!-- Testimonials Section -->
+        <section class="section">
+            <h2>What Our Clients Say</h2>
+            <div class="testimonial">
+                <p>"This campaign was a game-changer for our brand. We've seen a 40% increase in leads since partnering with them!"</p>
+                <p>- John Doe, CEO of XYZ Corp.</p>
+            </div>
+            <div class="testimonial">
+                <p>"Their team’s expertise and commitment to excellence helped us achieve our marketing goals and beyond. Highly recommended!"</p>
+                <p>- Jane Smith, Marketing Director at ABC Ltd.</p>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2025 AMB Freelance. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Toggle Hamburger Menu
+        const hamburgerMenu = document.getElementById("hamburgerMenu");
+        const navLinks = document.querySelector(".nav-links");
+
+        hamburgerMenu.addEventListener("click", () => {
+            navLinks.classList.toggle("active");
+        });
+
+        // Back Button Functionality
+        document.getElementById("backButton").addEventListener("click", function() {
+            window.history.back();
+        });
+    </script>
+
+</body>
+</html>

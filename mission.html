@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Mission - [Your AMB Freelance Name]</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: transparent;
+            color: #333;
+            background-image: url('mission.png'); /* Set your background image */
+            background-size: cover;
+            background-position: center;
+            height: 100vh; /* Ensure the body takes full height */
+            position: relative;
+        }
+        
+        /* Navbar Styles */
+        .navbar {
+            background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent background */
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000; /* Ensure it stays on top */
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 5px 20px; /* Reduced padding to make the navbar shorter */
+            height: 50px; /* Shortened navbar height */
+        }
+        .navbar a {
+            color: black;
+            text-decoration: none;
+            padding: 12px 20px;
+            font-size: 16px;
+        }
+        .navbar a:hover {
+            background-color: transparent;
+            color:white;
+        }
+        .navbar .logo img {
+            height: 30px; /* Adjust logo size */
+            width: auto;
+        }
+        .navbar .menu {
+            display: flex;
+        }
+        .navbar .hamburger {
+            display: none;
+            font-size: 30px;
+            cursor: pointer;
+            padding: 10px;
+            color: black;
+        }
+        
+        /* Responsive Layout (Hamburger menu for mobile) */
+        @media screen and (max-width: 768px) {
+            .navbar .menu {
+                display: none;
+                width: 100%;
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            .navbar .hamburger {
+                display: block;
+            }
+            .navbar.responsive .menu {
+                display: flex;
+                padding-top: 10px;
+            }
+            .navbar.responsive a {
+                padding: 12px;
+                text-align: left;
+                width: 100%;
+            }
+        }
+
+        /* Page content styles */
+        header {
+            background-color: transparent;
+            color: #fff;
+            padding: 10px 0;
+            text-align: center;
+        }
+        header h1 {
+            margin: 0;
+        }
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            padding: 20px;
+            background-color:transparent;
+            margin-top: 60px; /* Adjust for navbar */
+        }
+        h2 {
+            color: white;
+            font-size: 40px;
+        }
+        .ul, li {
+            color: white;
+            font-size: 20px;
+        }
+        p {
+            margin-bottom: 20px;
+            color: white;
+            font-size: 30px;
+        }
+        .section {
+            margin-bottom: 40px;
+        }
+
+        /* Footer */
+        .footer {
+            background-color: rgba(0, 0, 0, 0.8);
+            color: white;
+            padding: 10px 0;  /* Reduced padding to make the footer shorter */
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            text-align: center;
+        }
+
+        .footer p {
+            margin: 0;
+        }
+
+        /* New style for Our Mission title */
+        h2.mission-title {
+            font-size: 50px; /* Makes the font bigger */
+            font-weight: bold; /* Makes the text bold */
+            color: white; /* You can change the color if needed */
+            text-align: center; /* Centers the title */
+            margin-top: 40px; /* Adds some space above */
+            margin-bottom: 20px; /* Adds some space below */
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <div class="navbar" id="navbar">
+        <a href="#" class="logo">
+            <img src="logo.jpg" alt="AMB Freelance Logo"> <!-- Replace logo.jpg with your actual logo image -->
+        </a>
+        <div class="menu">
+            <a href="index.html">Home</a>
+        </div>
+        <span class="hamburger" onclick="toggleNavbar()">&#9776;</span>
+    </div>
+
+    <div class="container">
+        <!-- Our Mission Section -->
+        <section class="section" id="our-mission">
+            <h2 class="mission-title">Our Mission</h2>
+            <p>At [Your AMB Freelance Name], our mission is to empower businesses with innovative, impactful solutions that drive growth and efficiency. We are committed to providing the highest quality services that help businesses navigate challenges and seize new opportunities in today’s dynamic market.</p>
+        </section>
+
+        <section class="section">
+            <h2>Our Core Principles</h2>
+            <ul>
+                <li><strong>Innovation:</strong> We embrace change and continuously strive to deliver groundbreaking solutions that push boundaries and exceed expectations.</li>
+                <li><strong>Excellence:</strong> We believe in delivering results that stand the test of time. Our commitment to excellence is embedded in everything we do.</li>
+                <li><strong>Customer-Centricity:</strong> Our clients are at the heart of our mission. We are dedicated to providing tailored services that meet your unique needs and aspirations.</li>
+                <li><strong>Integrity:</strong> We conduct ourselves with the highest ethical standards, ensuring transparency, trust, and accountability in all our partnerships.</li>
+            </ul>
+        </section>
+
+        <section class="section">
+            <h2>Our Approach</h2>
+            <p>We follow a holistic approach to problem-solving, combining innovative strategies with actionable insights to create sustainable solutions. From consultation to execution, we are with you every step of the way to ensure that the mission we undertake together leads to success and growth.</p>
+        </section>
+
+        <section class="section">
+            <h2>Our Commitment to Impact</h2>
+            <p>We are not just focused on business outcomes—we are committed to making a positive impact on the communities and industries we serve. Our solutions are designed to create long-term value, not just short-term gains. We strive to build lasting relationships that benefit our clients, employees, and the world around us.</p>
+        </section>
+
+        <section class="section">
+            <h2>Our Vision for the Future</h2>
+            <p>We envision a future where businesses are equipped with the tools, knowledge, and strategies they need to thrive in a rapidly evolving world. Our mission is to lead the way in creating these opportunities and ensuring that our clients are always at the forefront of innovation.</p>
+        </section>
+
+    </div>
+    
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2025 Our AMB Freelance. All rights reserved.</p>
+    </footer>
+
+    <script>
+        function toggleNavbar() {
+            var navbar = document.getElementById("navbar");
+            navbar.classList.toggle("responsive");
+
+            var menu = document.querySelector(".menu");
+            if (menu.style.display === "flex") {
+                menu.style.display = "none";
+            } else {
+                menu.style.display = "flex";
+            }
+        }
+    </script>
+
+</body>
+</html>

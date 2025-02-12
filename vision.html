@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Vision - [Your AMB Freelance Name]</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: transparent;
+            color: black; /* Changed text color to black */
+            background-image: url('vision.png'); /* Set your background image */
+            background-size: cover;
+            background-position: center;
+            height: 100vh; /* Ensure the body takes full height */
+            position: relative;
+        }
+
+        /* Navbar Styles */
+        .navbar {
+            background-color: white; /* Semi-transparent background */
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000; /* Ensure it stays on top */
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 5px 20px; /* Reduced padding for a shorter navbar */
+            height: 40px; /* Set a specific height for the navbar */
+        }
+        .navbar a {
+            color: black; /* Set navbar links color to black */
+            text-decoration: none;
+            padding: 8px 16px; /* Reduced padding for links */
+            font-size: 14px; /* Smaller font size */
+        }
+        .navbar a:hover {
+            background-color: transparent;
+            color: black; /* Ensuring the hover color is also black */
+        }
+        .navbar .logo img {
+            height: 30px; /* Adjust logo size */
+            width: auto;
+        }
+        .navbar .menu {
+            display: flex;
+        }
+        .navbar .hamburger {
+            display: none;
+            font-size: 25px; /* Slightly smaller hamburger menu icon */
+            cursor: pointer;
+            padding: 10px;
+            color: black; /* Set hamburger color to black */
+        }
+
+        /* Responsive Layout (Hamburger menu for mobile) */
+        @media screen and (max-width: 768px) {
+            .navbar .menu {
+                display: none;
+                width: 100%;
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            .navbar .hamburger {
+                display: block;
+            }
+            .navbar.responsive .menu {
+                display: flex;
+                padding-top: 10px;
+            }
+            .navbar.responsive a {
+                padding: 12px;
+                text-align: left;
+                width: 100%;
+            }
+        }
+
+        /* Page content styles */
+        header {
+            background-color: #333;
+            color: white;
+            padding: 10px 0;
+            text-align: center;
+        }
+        header h1 {
+            margin: 0;
+            color: black; /* Ensure header title is black */
+        }
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: transparent;
+            margin-top: 100px; /* Adjust for navbar */
+        }
+        h2 {
+            color: black; /* Changed color of section titles to black */
+            font-size: 25px;
+        }
+        h3 {
+            color: black; /* Changed color of h3 titles to black */
+        }
+        p {
+            margin-bottom: 20px;
+            font-size: 20px;
+            color: black; /* Changed paragraph text color to black */
+        }
+        .section {
+            margin-bottom: 40px;
+        }
+        .ul, li {
+            color: black; /* Changed color of list items to black */
+            font-size: 20px;
+        }
+
+        /* New style for Our Vision title */
+        h2.vision-title {
+            font-size: 50px; /* Makes the font bigger */
+            font-weight: bold; /* Makes the text bold */
+            text-align: center; /* Centers the title */
+            margin-top: 50px; /* Adds some space above */
+            margin-bottom: 20px; /* Adds some space below */
+            color: black; /* Changed to black */
+        }
+
+        /* Shortened Footer */
+        .footer {
+            background-color: rgba(0, 0, 0, 0.8);
+            color: white;
+            padding: 10px 0;  /* Reduced padding */
+            text-align: center;
+        }
+
+        .footer p {
+            margin: 0; /* Removes default margin from <p> tag */
+            font-size: 14px; /* Smaller font size */
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <div class="navbar" id="navbar">
+        <a href="#" class="logo">
+            <img src="logo.jpg" alt="AMB Freelance Logo"> <!-- Replace logo.png with your actual logo image -->
+        </a>
+        <div class="menu">
+            <a href="index.html">Home</a>
+        </div>
+        <span class="hamburger" onclick="toggleNavbar()">&#9776;</span>
+    </div>
+
+    <div class="container">
+        <!-- Our Vision Section -->
+        <section class="section" id="our-vision">
+            <h2 class="vision-title">Our Vision</h2>
+            <p>At [Your AMB Freelance Name], our vision is to create a future where businesses not only succeed but thrive by embracing innovation, collaboration, and cutting-edge technology. We aim to build lasting relationships with our clients and partners to achieve mutual growth and success. Our vision is rooted in integrity and commitment, empowering companies to adapt to the challenges of tomorrow, today.</p>
+        </section>
+
+        <section class="section">
+            <h2>Guiding Principles of Our Vision</h2>
+            <ul>
+                <li><strong>Excellence in Innovation:</strong> We aim to lead through constant innovation, introducing new ideas that transform industries and redefine the standards of success.</li>
+                <li><strong>Client-Centric Approach:</strong> Our clients’ needs shape our vision. We strive to provide tailored solutions that enable them to grow and achieve lasting success.</li>
+                <li><strong>Commitment to Sustainability:</strong> We believe in building businesses that contribute positively to society and the environment, ensuring a sustainable future for generations to come.</li>
+                <li><strong>Global Impact:</strong> Our vision transcends borders. We aspire to create solutions that can be scaled globally, helping businesses worldwide reach their full potential.</li>
+            </ul>
+        </section>
+
+        <section class="section">
+            <h2>How We Realize Our Vision</h2>
+            <p>We are committed to turning our vision into reality by fostering a culture of innovation, collaboration, and continuous learning. Through investment in technology, strategic partnerships, and a relentless focus on customer satisfaction, we are prepared to meet the ever-evolving needs of the modern business world.</p>
+            <p>Our team is at the heart of this transformation. By nurturing talent and encouraging creativity, we empower our employees to drive meaningful change in everything they do. Together, we are building a AMB Freelance and a future that will redefine the business landscape.</p>
+        </section>
+
+        <section class="section">
+            <h2>The Impact of Our Vision</h2>
+            <p>By focusing on creating a truly transformative impact, our vision has already begun to influence businesses across industries. Our clients consistently see measurable results from our solutions, and we’re proud to play a role in their success stories. From cutting-edge software solutions to strategic consulting, our work is shaping the future of industries globally.</p>
+        </section>
+
+        <section class="section">
+            <h2>Client Testimonials</h2>
+            <p>"The vision of [Your AMB Freelance Name] is truly transformative. They don’t just deliver results—they drive innovation that propels us forward in an ever-evolving market. We’ve seen measurable improvements in efficiency and profitability thanks to their strategic insights." - <strong>Linda Moore, COO of Tech Innovations</strong></p>
+        </section>
+
+    </div>
+
+     <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2025 Our AMB Freelance</p>
+    </footer>
+
+    <script>
+        function toggleNavbar() {
+            var navbar = document.getElementById("navbar");
+            navbar.classList.toggle("responsive");
+
+            var menu = document.querySelector(".menu");
+            if (menu.style.display === "flex") {
+                menu.style.display = "none";
+            } else {
+                menu.style.display = "flex";
+            }
+        }
+    </script>
+
+</body>
+</html>

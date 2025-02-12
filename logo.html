@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Logo Design Project</title>
+    <style>
+        /* Reset margins and padding */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        /* Full-page background image */
+        body {
+            background-image: url('logodesign.jpg'); /* Replace with your image URL */
+            background-size: cover; /* Ensure the image covers the full page */
+            background-position: center; /* Center the image */
+            background-attachment: fixed; /* Ensure the image stays fixed while scrolling */
+            background-repeat: no-repeat; /* Prevent the image from repeating */
+            font-family: Arial, sans-serif;
+            height: 100vh;
+            color: white;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Navbar styles */
+        .navbar {
+            position: sticky;
+            top: 0;
+            background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent navbar */
+            padding: 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 1000;
+        }
+
+        .navbar img {
+            width: 60px; /* Adjust logo size */
+        }
+
+        .navbar ul {
+            list-style: none;
+            display: flex;
+        }
+
+        .navbar ul li {
+            margin-left: 25px;
+        }
+
+        .navbar a {
+            text-decoration: none;
+            color: white;
+            font-size: 20px; /* Increased font size */
+        }
+
+        /* Hamburger menu for small screens */
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+            gap: 6px;
+        }
+
+        .hamburger div {
+            width: 30px;
+            height: 4px;
+            background-color: white;
+        }
+
+        /* Content styling */
+        .content {
+            text-align: center;
+            padding: 120px 20px;
+            background-color: transparent; /* Semi-transparent background for better readability */
+            margin-bottom: 60px;
+        }
+
+        .content h1 {
+            font-size: 4em; /* Increased font size */
+            margin-bottom: 30px;
+        }
+
+        .content p {
+            font-size: 1.5em; /* Increased font size */
+            line-height: 1.8;
+        }
+
+        /* Sections */
+        .section {
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        .section h2 {
+            font-size: 3em; /* Increased font size */
+            margin-bottom: 40px;
+        }
+
+        .section p {
+            font-size: 1.4em; /* Increased font size */
+            line-height: 1.8;
+        }
+
+        .section ul {
+            font-size: 1.4em; /* Increased font size for list items */
+            list-style: none;
+            margin: 20px 0;
+            padding-left: 0;
+        }
+
+        .section ul li {
+            margin-bottom: 15px;
+        }
+
+        /* Footer styles */
+        .footer {
+            position: sticky;
+            bottom: 0;
+            background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent footer */
+            color: white;
+            text-align: center;
+            padding: 15px;
+            width: 100%;
+        }
+
+        /* Responsive styles */
+        @media (max-width: 768px) {
+            .navbar ul {
+                display: none;
+                flex-direction: column;
+                width: 100%;
+                text-align: center;
+                padding-top: 10px;
+            }
+
+            .navbar.active ul {
+                display: flex;
+            }
+
+            .hamburger {
+                display: flex;
+            }
+
+            .content {
+                padding: 100px 20px;
+            }
+
+            .section {
+                padding: 40px 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <div class="navbar">
+        <img src="logo.jpg" alt="Logo"> <!-- Replace with your logo image -->
+        <div class="hamburger" onclick="toggleMenu()">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="project.html">Back</a></li>
+        </ul>
+    </div>
+
+    <!-- Main content -->
+    <div class="content">
+        <h1>Logo Design Project</h1>
+        <p>This project showcases the design and creation of logos for various brands. Each design reflects the essence and values of the company it represents. Our work goes beyond aesthetics to capture the unique identity of each client. Below, you will find more details about our design process, services, and client testimonials.</p>
+    </div>
+
+    <!-- About the Project -->
+    <div class="section" id="about">
+        <h2>About the Project</h2>
+        <p>This logo design project aims to deliver high-quality, customized logos that not only look great but also embody the brand identity of each client. We specialize in creating logos that are timeless, versatile, and memorable, ensuring they work across all mediums and platforms.</p>
+    </div>
+
+    <!-- Design Process -->
+    <div class="section" id="process" style="background-color: transparent;">
+        <h2>Our Design Process</h2>
+        <p>Our design process follows a structured approach to ensure the best results for each logo project:</p>
+        <ul>
+            <li><strong>Research</strong>: We research the brand’s industry, audience, and values to understand the core essence of the brand.</li>
+            <li><strong>Conceptualization</strong>: Based on research, we brainstorm and sketch initial ideas to explore different directions.</li>
+            <li><strong>Refinement</strong>: We take the best concepts and refine them into final designs that best represent the brand’s identity.</li>
+            <li><strong>Finalization</strong>: The final logo is delivered in multiple formats suitable for various platforms and uses.</li>
+        </ul>
+    </div>
+
+    <!-- Services -->
+    <div class="section" id="services">
+        <h2>Our Services</h2>
+        <p>We offer a wide range of logo design services to cater to the needs of various clients:</p>
+        <ul>
+            <li><strong>Brand Identity Design</strong>: Comprehensive design solutions to help define your brand identity.</li>
+            <li><strong>Custom Logo Design</strong>: Unique, original logos created to reflect your brand's personality.</li>
+            <li><strong>Rebranding</strong>: Logo redesign services to refresh and modernize outdated logos.</li>
+            <li><strong>Brand Guidelines</strong>: We also provide brand guidelines to ensure consistency in your brand’s visual identity across all platforms.</li>
+        </ul>
+    </div>
+
+    <!-- Client Testimonials -->
+    <div class="section" id="testimonials" style="background-color: transparent;">
+        <h2>Client Testimonials</h2>
+        <p>Here’s what some of our clients have to say about our work:</p>
+        <blockquote>
+            <p>"The logo you designed for our company has truly elevated our brand. It’s modern, versatile, and speaks to our audience perfectly. We couldn't be happier with the result!" – <strong>John Doe, CEO of ExampleCorp</strong></p>
+        </blockquote>
+        <blockquote>
+            <p>"Your attention to detail and commitment to understanding our vision made this logo creation experience amazing. We’ve received countless compliments on our new look!" – <strong>Jane Smith, Marketing Director at TechSolutions</strong></p>
+        </blockquote>
+    </div>
+
+
+    <!-- Footer -->
+    <div class="footer">
+        <p style="font-size: 1.5em;"> © 2025 Our AMB Freelance. All rights reserved.</p>
+    </div>
+
+    <script>
+        // Toggle the navbar on small screens
+        function toggleMenu() {
+            document.querySelector('.navbar').classList.toggle('active');
+        }
+    </script>
+
+</body>
+</html>

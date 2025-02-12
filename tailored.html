@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Discover Amazing Solutions Tailored Just for You</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <style>
+        /* Full-page Background Image with Transparency */
+        body {
+            background: url('2.jpg') no-repeat center center fixed;
+            background-size: cover;
+            height: 100vh;
+            margin: 0;
+            color: white; /* Default text color for readability */
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Make the entire body semi-transparent, leaving content unaffected */
+        .transparent-overlay {
+            background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black overlay */
+            flex: 1;
+        }
+
+        /* Navbar Styles */
+        .navbar {
+            background-color: white;
+            padding: 1rem;
+        }
+
+        .navbar .navbar-brand img {
+            width: 100px; /* Adjust logo size */
+        }
+
+        .navbar .navbar-nav .nav-link {
+            color: #333; /* Dark text color for readability */
+            font-weight: bold;
+        }
+
+        .navbar .navbar-nav .nav-link:hover {
+            color: #ff6b6b;
+        }
+
+        /* Custom Styles for the Page */
+        .hero-section {
+            padding: 100px 0;
+            text-align: center;
+            z-index: 1;
+        }
+
+        .hero-section h1 {
+            font-size: 3rem;
+            font-weight: bold;
+        }
+
+        .hero-section p {
+            font-size: 1.25rem;
+            max-width: 700px;
+            margin: 0 auto 30px;
+        }
+
+        .cta-button {
+            padding: 12px 30px;
+            background-color: #ff6b6b;
+            border: none;
+            color: white;
+            font-size: 1.2rem;
+            border-radius: 5px;
+            transition: 0.3s;
+        }
+
+        .cta-button:hover {
+            background-color: #e63946;
+        }
+
+        .solution-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .solution-card {
+            background-color: rgba(248, 249, 250, 0.8); /* Light transparent background for better readability */
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .solution-card h4 {
+            font-size: 1.5rem;
+            margin-top: 15px;
+        }
+
+        .solution-card p {
+            font-size: 1rem;
+            color: #666;
+            margin: 15px 0;
+        }
+
+        .contact-form label {
+            font-weight: bold;
+        }
+
+        .contact-form .form-control {
+            border-radius: 5px;
+            margin-bottom: 15px;
+        }
+
+        /* Mobile Responsive Styles */
+        @media (max-width: 768px) {
+            .hero-section h1 {
+                font-size: 2rem;
+            }
+
+            .cta-button {
+                padding: 10px 20px;
+            }
+
+            .solution-card {
+                margin-bottom: 30px;
+            }
+        }
+
+        /* Section Background Adjustment */
+        section {
+            position: relative;
+            z-index: 2;
+        }
+       /* Footer */
+.footer {
+    background-color: rgba(0, 0, 0, 0.8);
+    color: black;
+    padding: 20px 0;  /* Adds padding to top and bottom */
+    position: fixed;
+    bottom: 0;  /* Keeps the footer at the bottom of the page */
+    left: 0;
+    width: 100%;  /* Ensures the footer stretches across the whole screen */
+    text-align: center;  /* Centers the content inside the footer */
+}
+
+.footer p {
+    margin: 0; /* Removes default margin from <p> tag */
+}
+    </style>
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-light">
+    <div class="container-fluid">
+        <!-- Logo on the left -->
+        <a class="navbar-brand" href="#">
+            <img src="logo.jpg" alt="Logo"> <!-- Replace with your actual logo -->
+        </a>
+        <!-- Navbar Links -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- Transparent Overlay Section -->
+<div class="transparent-overlay">
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-section">
+        <div class="container">
+            <h1>Discover Amazing Solutions Tailored Just for You</h1>
+            <p>We provide personalized services designed to fit your unique needs. Whether you're looking to streamline operations, boost creativity, or integrate cutting-edge technology, we've got you covered.</p>
+            
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-5 bg-light text-center">
+        <div class="container">
+            <h2 class="text-primary">What We Offer</h2>
+            <p class="text-muted mx-auto" style="max-width: 800px;">We specialize in crafting solutions that are as unique as you are. From tailored consulting services to innovative product development, our team works with you to bring your vision to life.</p>
+        </div>
+    </section>
+
+    <!-- Our Solutions Section -->
+    <section id="solutions" class="py-5">
+        <div class="container">
+            <h2 class="text-white text-center display-3 mb-4">Our Tailored Solutions</h2>
+            <p class="text-white text-center mb-4" style="max-width: 800px; margin: 0 auto;">Explore our broad range of personalized solutions that address your specific needs and help drive your success.</p>
+
+            <div class="row">
+                <!-- Solution 1 -->
+                <div class="col-md-4 col-sm-12 mb-4">
+                    <div class="solution-card">
+                        <img src="personalized consultation.png" alt="Solution 1">
+                        <h4>Personalized Consultation</h4>
+                        <p>We offer in-depth, one-on-one consultations to understand your needs and develop a strategy that's perfectly suited to your goals.</p>
+                        <a href="personalized.html" class="btn btn-outline-primary">Learn More</a>
+                    </div>
+                </div>
+
+                <!-- Solution 2 -->
+                <div class="col-md-4 col-sm-12 mb-4">
+                    <div class="solution-card">
+                        <img src="creative development.png" alt="Solution 2">
+                        <h4>Creative Development</h4>
+                        <p>Our team brings fresh, creative ideas to help you stand out and succeed. We craft solutions that break the mold and spark innovation.</p>
+                        <a href="creative.html" class="btn btn-outline-success">Learn More</a>
+                    </div>
+                </div>
+
+                <!-- Solution 3 -->
+                <div class="col-md-4 col-sm-12 mb-4">
+                    <div class="solution-card">
+                        <img src="technology integration.png" alt="Solution 3">
+                        <h4>Technology Integration</h4>
+                        <p>We help integrate the latest technologies into your workflow, streamlining processes and increasing efficiency.</p>
+                        <a href="technology.html" class="btn btn-outline-danger">Learn More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="py-5 bg-light text-center">
+        <div class="container">
+            <h2 class="text-primary">What Our Clients Say</h2>
+            <p class="text-muted mb-4">See how our personalized solutions have helped businesses and individuals reach new heights of success.</p>
+
+            <div class="row">
+                <!-- Testimonial 1 -->
+                <div class="col-md-4 mb-4">
+                    <div class="card shadow-sm p-4">
+                        <p class="text-muted">"Their team completely transformed our business by providing tailored solutions that addressed our unique needs. We couldn't be happier!"</p>
+                        <h5 class="text-primary">Sarah Lee</h5>
+                        <p class="font-weight-bold">CEO, InnovateCo</p>
+                    </div>
+                </div>
+
+                <!-- Testimonial 2 -->
+                <div class="col-md-4 mb-4">
+                    <div class="card shadow-sm p-4">
+                        <p class="text-muted">"The solutions we received were incredibly well thought-out and executed. They truly listened to our needs and delivered exactly what we wanted."</p>
+                        <h5 class="text-primary">John Smith</h5>
+                        <p class="font-weight-bold">Founder, New Horizons</p>
+                    </div>
+                </div>
+
+                <!-- Testimonial 3 -->
+                <div class="col-md-4 mb-4">
+                    <div class="card shadow-sm p-4">
+                        <p class="text-muted">"Our AMB Freelance has been able to scale rapidly thanks to the innovative solutions provided. Their team is always a step ahead."</p>
+                        <h5 class="text-primary">David Johnson</h5>
+                        <p class="font-weight-bold">Marketing Director, TechStart</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+
+</body>
+</html>
+
+ <!-- Footer -->
+ <footer class="footer">
+    <div class="container">
+        <p class="text-center mb-0">&copy; © 2025 Our AMB Freelance. All rights reserved.</p>
+    </div>
+</footer>
+
+
+</body>
+</html>

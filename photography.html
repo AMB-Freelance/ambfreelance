@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Office Photography Portfolio</title>
+    <style>
+        /* General Styles */
+        body {
+            margin: 0;
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            background: url('photography.jpg') no-repeat center center fixed;
+            background-size: cover;
+            color: #fff;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 30px;
+            background-color: rgba(0, 0, 0, 0.7);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            width: 100%;
+        }
+
+        .logo img {
+            width: 60px;
+            height: 60px;
+        }
+
+        .nav-links ul {
+            display: flex;
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .nav-links li {
+            margin: 0 30px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: white;
+            font-size: 22px;
+            font-weight: 600;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: #00bcd4;
+        }
+
+        .hamburger {
+            display: none;
+            font-size: 35px;
+            cursor: pointer;
+        }
+
+        footer {
+            position: sticky;
+            bottom: 0;
+            background-color: rgba(0, 0, 0, 0.7);
+            color: white;
+            text-align: center;
+            padding: 30px;
+        }
+
+        .section {
+            padding: 80px 30px;
+            text-align: center;
+            margin: 0 20px;
+        }
+
+        h1, h2 {
+            font-size: 48px;
+            font-weight: 700;
+            margin-bottom: 30px;
+        }
+
+        h3 {
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-size: 22px;
+            line-height: 1.8;
+            margin-bottom: 30px;
+        }
+
+li{
+    font-size: 22px;
+}
+
+        .portfolio-card, .testimonial, .team-card {
+            display: inline-block;
+            background: rgba(0, 0, 0, 0.7);
+            padding: 35px;
+            margin: 25px;
+            width: 320px;
+            border-radius: 10px;
+            text-align: left;
+        }
+
+        .portfolio-card img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+
+        .portfolio-card h3, .team-card h3 {
+            font-size: 28px;
+            margin-bottom: 15px;
+        }
+
+        .portfolio-card p, .team-card p {
+            font-size: 18px;
+        }
+
+        .cta-button {
+            background-color: #00bcd4;
+            color: white;
+            padding: 20px 40px;
+            font-size: 24px;
+            font-weight: 600;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .cta-button:hover {
+            background-color: #0097a7;
+        }
+
+        /* Responsive Styles */
+        @media screen and (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+
+            .hamburger {
+                display: block;
+            }
+
+            .nav-links.active {
+                display: block;
+                position: absolute;
+                top: 60px;
+                right: 0;
+                background-color: rgba(0, 0, 0, 0.9);
+                padding: 20px;
+                width: 250px;
+            }
+
+            .nav-links li {
+                margin: 20px 0;
+                text-align: center;
+            }
+
+            .section {
+                padding: 50px 15px;
+            }
+
+            .portfolio-card, .testimonial, .team-card {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <header class="navbar">
+        <div class="logo">
+            <img src="logo.jpg" alt="Logo" width="60" height="60">
+        </div>
+        <nav class="nav-links">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="project.html" id="backButton">Back</a></li>
+            </ul>
+        </nav>
+        <div class="hamburger" id="hamburgerMenu">
+            &#9776;
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section -->
+        <section class="section">
+            <h1>Professional Office Photography</h1>
+            <p>Transform your office image with professional corporate headshots, event photography, and team portraits that capture the essence of your business.</p>
+           
+        </section>
+
+        <!-- About the Photographer Section -->
+        <section class="section">
+            <h2>About Me</h2>
+            <p>Hi, I'm [Your Name], a professional photographer specializing in corporate and office environments. Whether you're looking for headshots, office event photos, or team portraits, I provide high-quality, professional images that represent your business in the best light.</p>
+        </section>
+
+        <!-- Office Photography Services Section -->
+        <section class="section">
+            <h2>Our Office Photography Services</h2>
+            <p>Our photography services are tailored to your business needs. We help you make a lasting impression with stunning, professional photos.</p>
+            <ul>
+                <li><strong>Corporate Headshots:</strong> Professional headshots for your team members, leadership, and employees to elevate your company's image.</li>
+                <li><strong>Office Events:</strong> Capturing your corporate events, conferences, team-building activities, and more to document your company culture.</li>
+                <li><strong>Team Portraits:</strong> Group photos that showcase your team’s collaboration and unity.</li>
+                <li><strong>Product Photography:</strong> High-quality photography for your office-related products or services.</li>
+            </ul>
+        </section>
+
+
+        <!-- Testimonials Section -->
+        <section class="section">
+            <h2>Client Testimonials</h2>
+            <div class="testimonial">
+                <p>"The headshots we received were exactly what we needed to update our company profiles. We couldn't be happier with the results!"</p>
+                <p>- John Smith, CEO of XYZ Corp.</p>
+            </div>
+            <div class="testimonial">
+                <p>"[Your Name] captured the essence of our corporate event in the most professional way. The photos were outstanding!"</p>
+                <p>- Sarah Johnson, Event Manager at ABC Inc.</p>
+            </div>
+        </section>
+
+    </main>
+
+    <footer style="background-color: rgba(0, 0, 0, 0.7); color: white; text-align: center; padding: 10px;">
+        <p>&copy; 2025 Our AMB Freelance. All rights reserved.</p>
+    </footer>
+    
+    
+
+    <script>
+        // Toggle Hamburger Menu
+        const hamburgerMenu = document.getElementById("hamburgerMenu");
+        const navLinks = document.querySelector(".nav-links");
+
+        hamburgerMenu.addEventListener("click", () => {
+            navLinks.classList.toggle("active");
+        });
+
+        // Back Button Functionality
+        document.getElementById("backButton").addEventListener("click", function() {
+            window.history.back();
+        });
+    </script>
+
+</body>
+</html>

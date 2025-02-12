@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Illustration</title>
+    <style>
+        /* Reset margins and padding */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        /* Full-page background image */
+        body {
+            background-image: url('illustration.jpg'); /* Replace with your image URL */
+            background-size: cover; /* Ensure the image covers the full page */
+            background-position: center; /* Center the image */
+            background-attachment: fixed; /* Ensure the image stays fixed while scrolling */
+            background-repeat: no-repeat; /* Prevent the image from repeating */
+            font-family: Arial, sans-serif;
+            height: 100vh;
+            color: white;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Navbar styles */
+        .navbar {
+            position: sticky;
+            top: 0;
+            background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent navbar */
+            padding: 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 1000;
+        }
+
+        .navbar img {
+            width: 60px; /* Adjust logo size */
+        }
+
+        .navbar ul {
+            list-style: none;
+            display: flex;
+        }
+
+        .navbar ul li {
+            margin-left: 25px;
+        }
+
+        .navbar a {
+            text-decoration: none;
+            color: white;
+            font-size: 20px; /* Increased font size */
+        }
+
+        /* Hamburger menu for small screens */
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+            gap: 6px;
+        }
+
+        .hamburger div {
+            width: 30px;
+            height: 4px;
+            background-color: white;
+        }
+
+        /* Content styling */
+        .content {
+            text-align: center;
+            padding: 120px 20px;
+            background-color: transparent; /* Semi-transparent background for better readability */
+            margin-bottom: 60px;
+        }
+
+        .content h1 {
+            font-size: 4em; /* Increased font size */
+            margin-bottom: 30px;
+        }
+
+        .content p {
+            font-size: 1.5em; /* Increased font size */
+            line-height: 1.8;
+        }
+
+        /* Sections */
+        .section {
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        .section h2 {
+            font-size: 3em; /* Increased font size */
+            margin-bottom: 40px;
+        }
+
+        .section p {
+            font-size: 1.4em; /* Increased font size */
+            line-height: 1.8;
+        }
+
+        .section ul {
+            font-size: 1.4em; /* Increased font size for list items */
+            list-style: none;
+            margin: 20px 0;
+            padding-left: 0;
+        }
+
+        .section ul li {
+            margin-bottom: 15px;
+        }
+
+        /* Footer styles */
+        .footer {
+            position: sticky;
+            bottom: 0;
+            background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent footer */
+            color: white;
+            text-align: center;
+            padding: 15px;
+            width: 100%;
+        }
+
+        /* Responsive styles */
+        @media (max-width: 768px) {
+            .navbar ul {
+                display: none;
+                flex-direction: column;
+                width: 100%;
+                text-align: center;
+                padding-top: 10px;
+            }
+
+            .navbar.active ul {
+                display: flex;
+            }
+
+            .hamburger {
+                display: flex;
+            }
+
+            .content {
+                padding: 100px 20px;
+            }
+
+            .section {
+                padding: 40px 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <div class="navbar">
+        <img src="logo.jpg" alt="Logo"> <!-- Replace with your logo image -->
+        <div class="hamburger" onclick="toggleMenu()">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="project.html">Back</a></li>
+        </ul>
+    </div>
+
+    <!-- Main content -->
+    <div class="content">
+        <h1>Illustration</h1>
+        <p>This project focuses on the art of illustration design, where we bring imaginative concepts to life. From digital illustrations to hand-drawn sketches, each piece is uniquely crafted to tell a story. Explore the process and creativity behind our illustrative designs below.</p>
+    </div>
+
+    <!-- About the Project -->
+    <div class="section" id="about">
+        <h2>About the Project</h2>
+        <p>This illustration design project is centered around bringing abstract ideas into visually appealing works of art. We specialize in creating both digital and hand-drawn illustrations that capture emotions, stories, and messages, making them visually engaging and memorable.</p>
+    </div>
+
+    <!-- Design Process -->
+    <div class="section" id="process" style="background-color: transparent;">
+        <h2>Our Design Process</h2>
+        <p>Our illustration design process is dynamic and involves several key stages to ensure each piece aligns with the vision and purpose:</p>
+        <ul>
+            <li><strong>Conceptualization</strong>: We collaborate with clients to understand their goals, message, and vision before sketching out ideas.</li>
+            <li><strong>Drafting</strong>: We create rough drafts, exploring different illustration styles and compositions to capture the best representation of the idea.</li>
+            <li><strong>Refinement</strong>: After selecting the best draft, we refine the artwork, focusing on details like shading, colors, and textures.</li>
+            <li><strong>Final Artwork</strong>: Once the illustration is perfected, we deliver the final piece in high-resolution formats suitable for print or digital use.</li>
+        </ul>
+    </div>
+
+    <!-- Services -->
+    <div class="section" id="services">
+        <h2>Our Illustration Services</h2>
+        <p>We provide a wide range of illustration design services to meet the diverse needs of our clients:</p>
+        <ul>
+            <li><strong>Character Design</strong>: Create original, expressive characters for brands, books, games, and more.</li>
+            <li><strong>Book & Editorial Illustrations</strong>: Illustrations for books, magazines, or online publications that complement written content.</li>
+            <li><strong>Concept Art</strong>: Develop concept art for games, movies, or advertising campaigns to visualize and bring ideas to life.</li>
+            <li><strong>Custom Illustrations</strong>: Tailored illustrations based on client requirements for use in marketing materials, branding, or personal projects.</li>
+        </ul>
+    </div>
+
+    <!-- Client Testimonials -->
+    <div class="section" id="testimonials" style="background-color: transparent;">
+        <h2>Client Testimonials</h2>
+        <p>Our clients love the creativity and professionalism we bring to each illustration project:</p>
+        <blockquote>
+            <p>"The illustrations for our brand’s campaign were absolutely stunning! They brought our story to life in a way we never imagined. We couldn’t be more pleased." – <strong>Sarah Adams, Creative Director at Artify</strong></p>
+        </blockquote>
+        <blockquote>
+            <p>"Your illustrations for our children’s book were so captivating! They helped elevate the storytelling and make the book visually appealing for young readers." – <strong>Mark Lee, Author of 'Adventure Time'</strong></p>
+        </blockquote>
+    </div>
+
+    <!-- Contact Section -->
+    <div class="section" id="contact">
+        <h2>Contact Us</h2>
+        <p>If you’re looking for custom illustrations for your project, we’d love to work with you! Please reach out using the form below:</p>
+        <form action="#" method="POST">
+            <label for="name" style="font-size: 1.4em;">Name:</label>
+            <input type="text" id="name" name="name" required><br><br>
+            <label for="email" style="font-size: 1.4em;">Email:</label>
+            <input type="email" id="email" name="email" required><br><br>
+            <label for="message" style="font-size: 1.4em;">Message:</label><br>
+            <textarea id="message" name="message" rows="6" cols="50" required></textarea><br><br>
+            <button type="submit" style="font-size: 1.4em;">Submit</button>
+        </form>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+        <p style="font-size: 1.5em;">© 2025 Our AMB Freelance. All rights reserved.</p>
+    </div>
+
+    <script>
+        // Toggle the navbar on small screens
+        function toggleMenu() {
+            document.querySelector('.navbar').classList.toggle('active');
+        }
+    </script>
+
+</body>
+</html>

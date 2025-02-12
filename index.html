@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Responsive Navbar & Hero Section</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <style>
+        /* Navbar Styling */
+        .navbar-nav {
+            flex-grow: 1;
+            justify-content: center;
+        }
+        
+        /* Hero Section Styles */
+        .carousel-item {
+            height: 150vh; /* Full-screen height */
+            background-size: cover;
+            background-position: center;
+            position: relative;
+        }
+
+        /* Black Overlay */
+        .carousel-item::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.6); /* Dark overlay */
+        }
+
+        /* Centered Content */
+        .carousel-caption {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            color: #fff;
+            z-index: 2;
+        }
+
+        .carousel-caption h1 {
+            font-size: 3.5rem;
+            font-weight: bold;
+        }
+
+        .carousel-caption p {
+            font-size: 1.3rem;
+            max-width: 600px;
+            margin: auto;
+        }
+
+        /* Read More Button */
+        .btn-read-more {
+            padding: 12px 30px;
+            font-size: 1.2rem;
+            background-color: #ff6b6b;
+            border: none;
+            color: white;
+            border-radius: 5px;
+            transition: 0.3s;
+        }
+
+        .btn-read-more:hover {
+            background-color: #e63946;
+        }
+
+        /* Footer */
+        .footer {
+            background-color: rgba(0, 0, 0, 0.8);
+            color: white;
+            padding: 20px 0;  /* Adds padding to top and bottom */
+            position: fixed;
+            bottom: 0;  /* Keeps the footer at the bottom of the page */
+            left: 0;
+            width: 100%;  /* Ensures the footer stretches across the whole screen */
+            text-align: center;  /* Centers the content inside the footer */
+        }
+
+        .footer p {
+            margin: 0; /* Removes default margin from <p> tag */
+        }
+    </style>
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container">
+        <a class="navbar-brand" href="#">
+            <img src="logo.jpg" alt="Logo" width="100">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav mx-auto">
+                <li class="nav-item"><a class="nav-link" href="project.html">Our Projects</a></li>
+                <li class="nav-item"><a class="nav-link" href="contact.html">Contact Us</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- Hero Slider -->
+<div id="heroCarousel" class="carousel slide" data-bs-ride="carousel">
+    
+    <!-- Indicators -->
+    <div class="carousel-indicators">
+        <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="0" class="active"></button>
+        <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="1"></button>
+        <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="2"></button>
+    </div>
+
+    <!-- Slides -->
+    <div class="carousel-inner">
+        <div class="carousel-item active" style="background-image: url('1.jpg');">
+            <div class="carousel-caption">
+                <h1>Welcome to Our AMB Freelance</h1>
+                <p>Discover amazing solutions tailored just for you.</p>
+                <a href="tailored.html" class="btn btn-read-more">Read More</a>
+            </div>
+        </div>
+        <div class="carousel-item" style="background-image: url('2.jpg');">
+            <div class="carousel-caption">
+                <h1>Quality Services</h1>
+                <p>We provide high-quality services to meet your needs.</p>
+                <a href="quality.html" class="btn btn-read-more">Read More</a>
+            </div>
+        </div>
+        <div class="carousel-item" style="background-image: url('3.jpg');">
+            <div class="carousel-caption">
+                <h1>Innovative Solutions</h1>
+                <p>Empowering businesses with technology and innovation.</p>
+                <a href="innovative.html" class="btn btn-read-more">Read More</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigation Controls -->
+    <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon"></span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon"></span>
+    </button>
+
+</div>
+
+<section class="py-5">
+    <div class="container">
+        <div class="row align-items-center">
+            <!-- Left Side Content -->
+            <div class="col-lg-6">
+                <h5 class="text-primary">About Us</h5>
+                <ul class="nav nav-pills mb-3" id="aboutTabs" role="tablist">
+                    <li class="nav-item">
+                        <button class="nav-link active" id="techCrafted-tab" data-bs-toggle="pill" data-bs-target="#techCrafted" type="button">Our AMB Freelance</button>
+                    </li>
+                    <li class="nav-item">
+                        <button class="nav-link" id="mission-tab" data-bs-toggle="pill" data-bs-target="#mission" type="button">Our Mission</button>
+                    </li>
+                    <li class="nav-item">
+                        <button class="nav-link" id="vision-tab" data-bs-toggle="pill" data-bs-target="#vision" type="button">Our Vision</button>
+                    </li>
+                </ul>
+
+                <div class="tab-content" id="aboutTabsContent">
+                    <!-- Our AMB Freelance Tab -->
+                    <div class="tab-pane fade show active" id="techCrafted">
+                        <h2>Who We Are</h2>
+                        <p>We are a leading AMB Freelance dedicated to delivering innovative solutions that drive business success. With years of experience, we provide top-notch services tailored to your needs.</p>
+                        <a href="Who We Are.html" class="btn btn-primary">Learn More</a>
+                    </div>
+                    <!-- Our Mission Tab -->
+                    <div class="tab-pane fade" id="mission">
+                        <h2>Our Mission</h2>
+                        <p>Our mission is to empower businesses with technology, ensuring seamless growth and sustainable development. We strive to make a positive impact through innovation and dedication.</p>
+                        <a href="mission.html" class="btn btn-primary">Learn More</a>
+                    </div>
+                    <!-- Our Vision Tab -->
+                    <div class="tab-pane fade" id="vision">
+                        <h2>Our Vision</h2>
+                        <p>We envision a world where technology bridges gaps and creates limitless opportunities. Our goal is to lead the industry with cutting-edge solutions and forward-thinking strategies.</p>
+                        <a href="vision.html" class="btn btn-primary">Learn More</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Side Image -->
+            <div class="col-lg-6 text-center">
+                <img src="4.jpeg" alt="About Us" class="img-fluid rounded">
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+    <div class="container">
+        <p class="text-center mb-0">&copy; 2025 Our AMB Freelance. All rights reserved.</p>
+    </div>
+</footer>
+
+<!-- FontAwesome for Icons -->
+<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>

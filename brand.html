@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brand Identity Project</title>
+    <style>
+        /* Reset some default styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Body and Background */
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-image: url('brand.png'); /* Add your background image */
+            background-size: cover;
+            background-position: center;
+            min-height: 100vh;
+            color: white;
+            line-height: 1.5;
+        }
+
+        /* Navbar */
+        .navbar {
+            position: sticky;
+            top: 0;
+            background-color: rgba(0, 0, 0, 0.8);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            z-index: 1000;
+        }
+
+        .navbar .logo a {
+            display: flex;
+            align-items: center;
+            color: white;
+            text-decoration: none;
+            font-size: 24px;
+            font-weight: 500;
+        }
+
+        .navbar .logo img {
+            width: 40px; /* Adjust logo size */
+            height: auto;
+            margin-right: 10px;
+        }
+
+        .navbar .nav-links {
+            display: flex;
+            list-style: none;
+        }
+
+        .navbar .nav-links li {
+            margin: 0 15px;
+        }
+
+        .navbar .nav-links li a {
+            text-decoration: none;
+            color: white;
+            font-size: 18px;
+            transition: color 0.3s;
+        }
+
+        .navbar .nav-links li a:hover {
+            color: #FFD700;
+        }
+
+        /* Hamburger Icon for Small Screens */
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+        }
+
+        .hamburger .line {
+            width: 25px;
+            height: 3px;
+            background-color: white;
+            margin: 4px 0;
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+                flex-direction: column;
+                position: absolute;
+                top: 60px;
+                right: 20px;
+                background-color: rgba(0, 0, 0, 0.9);
+                width: 200px;
+                border-radius: 8px;
+                padding: 10px;
+            }
+
+            .nav-links.active {
+                display: flex;
+            }
+
+            .hamburger {
+                display: flex;
+            }
+
+            .nav-links li {
+                margin: 10px 0;
+            }
+
+            .nav-links li a {
+                font-size: 20px;
+            }
+        }
+
+        /* Content Section */
+        .content {
+            text-align: center;
+            padding: 150px 20px;
+        }
+
+        .content h1 {
+            font-size: 50px;
+            font-weight: 700;
+        }
+
+        .content p {
+            font-size: 20px;
+            margin-top: 10px;
+        }
+
+        .content .extra-content {
+            margin-top: 50px;
+            font-size: 18px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .extra-content h2 {
+            margin-top: 30px;
+            font-size: 28px;
+            color: #FFD700;
+        }
+
+        .extra-content ul {
+            list-style: none;
+            margin-top: 10px;
+        }
+
+        .extra-content ul li {
+            font-size: 18px;
+            margin: 5px 0;
+        }
+
+        /* Footer */
+        .footer {
+            position: relative;
+            width: 100%;
+            text-align: center;
+            background-color: rgba(0, 0, 0, 0.8);
+            padding: 20px 0;
+            color: white;
+            bottom: 0;
+            margin-top: auto;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="logo">
+            <img src="logo.jpg" alt="Logo"> <!-- Replace with your logo image -->
+            
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="project.html">Back</a></li>
+        </ul>
+        <div class="hamburger" id="hamburger">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+        </div>
+    </nav>
+
+    <!-- Content Section -->
+    <section class="content">
+        <div class="content-text">
+            <h1>Welcome to Our Brand</h1>
+            <p>We specialize in crafting unique brand identities, logos, and designs that make your business stand out. Let's build your vision together.</p>
+        </div>
+
+        <!-- More Content -->
+        <div class="extra-content">
+            <h2>What We Do</h2>
+            <p>We help businesses create their visual identity, making sure your brand speaks directly to your audience. Our team works on:</p>
+            <ul>
+                <li>Logo design and development</li>
+                <li>Brand guidelines creation</li>
+                <li>Typography and color scheme selection</li>
+                <li>Visual storytelling through graphics</li>
+            </ul>
+
+            <h2>Why Choose Us?</h2>
+            <p>We deliver personalized branding solutions tailored to your business goals. With a focus on creativity and strategy, we ensure that every brand identity we create resonates with your target audience.</p>
+
+            <h2>Our Services</h2>
+            <p>We offer a range of services designed to build and elevate your brand's presence:</p>
+            <ul>
+                <li><strong>Brand Strategy:</strong> Understand your brand's goals and target audience.</li>
+                <li><strong>Visual Identity:</strong> Design a logo, color scheme, and brand assets.</li>
+                <li><strong>Website Design:</strong> Build a modern, responsive website to showcase your brand.</li>
+                <li><strong>Social Media Branding:</strong> Develop cohesive and engaging social media visuals.</li>
+            </ul>
+
+            <h2>Let's Talk</h2>
+            <p>Ready to create a unique identity for your brand? Get in touch with us to schedule a consultation!</p>
+        </div>
+    </section>
+
+    <!-- Sticky Footer -->
+    <footer class="footer">
+        <p>&copy; © 2025 Our AMB Freelance. All rights reserved.</p>
+    </footer>
+
+   <!-- Script for Hamburger Toggle -->
+   <script>
+    const hamburger = document.getElementById('hamburger');
+    const navLinks = document.querySelector('.nav-links');
+
+    hamburger.addEventListener('click', () => {
+        navLinks.classList.toggle('active');
+    });
+</script>
+</body>
+</html>
